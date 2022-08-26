@@ -1,7 +1,6 @@
 import { ApolloClient, HttpLink, InMemoryCache } from '@apollo/client'
 
 const APP_ID = process.env.ATLAS_APP_ID as string
-console.log(APP_ID)
 const API_KEY = process.env.ATLAS_API_KEY as string
 
 export const client = new ApolloClient({

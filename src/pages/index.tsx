@@ -1,8 +1,16 @@
 import Head from 'next/head'
-import React from 'react'
+import React, { useEffect } from 'react'
+import axios from 'axios'
 import type { NextPage } from 'next'
 
 const Home: NextPage = () => {
+  useEffect(() => {
+    axios
+      .get('/api/hello')
+      .then((response) => console.log(response))
+      .catch((err) => console.log(err))
+  })
+
   return (
     <div>
       <Head>
